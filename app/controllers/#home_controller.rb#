@@ -1,0 +1,30 @@
+class HomeController < ApplicationController
+  include ApplicationHelper
+
+  helper_method :order_column, :sort_column, :def_page
+
+  caches_page :index, :search
+
+  def index
+    @yarns = Yarn.order(order_column + ' ' + sort_column).page( def_page ).per(30)
+    @keywords = get_keyword_array( params )
+  end
+
+  def search    @messages = Message.search_us( params[:message][:keywords], def_page )
+    @keywords = get_keyword_array( params )
+  end
+
+  private
+
+  def def_page
+    params[:page] ? params[:page] : 1
+  end
+  
+  def order_column
+    Yarn.column_names.include?(params[:order]) ? params[:order] : 'updated_at'
+  end
+
+  def sort_column
+    %w[asc desc].include?(params[:sort]) ? params[:sort] : 'desc'
+  end
+end

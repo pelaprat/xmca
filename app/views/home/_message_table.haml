@@ -1,0 +1,14 @@
+.list_table
+  .title-row
+    .cell{ :style => 'width: 16px'  }
+    .cell{ :style => 'width: 225px' }= sortable "id", 'Last Post'
+    .cell{ :style => 'width: 150px' }= sortable "person_id", 'Last Author'
+    .cell{ :style => 'width: 515px' }= sortable "subject", 'Subject'
+  - @messages.each do |message|
+    .row
+      .cell
+      .cell-date= message.updated_at.strftime '%B %d %Y @ %H:%m'
+      .cell-name= link_to message.person.first + ' ' + message.person.last, person_path( message.person ) 
+      .cell-link= link_to message.subject, yarn_path( message.yarn, :anchor => message.id, :keywords => @keywords.join('+') )
+
+

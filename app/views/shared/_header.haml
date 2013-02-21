@@ -1,0 +1,43 @@
+%base{ :href => 'http://xmca.ucsd.edu' }
+
+%meta{"http-equiv" => "content-type", :content => "text/html;charset=ISO-8859-1"}
+%meta{ :name => :language, :content => 'en-US' }
+%meta{ :name => :description, :content => "Welcome to the online home of UCSD's Laboratory of Comparative Human Cognition (LCHC)." }
+%meta{ :name => :keywords, :content => 'lchc,laboratory of comparative human cognition,ucsd,university of california san diego,xmca,cognition,journal'}
+
+<!-- Blueprint CSS Framework 1.0: -->
+%link{ :rel => :stylesheet, :href => 'http://dev.lchc.ucsd.edu/assets/styles/blueprint/global.css', :type => 'text/css', :media => 'screen, projection' }
+%link{ :rel => :stylesheet, :href => 'http://dev.lchc.ucsd.edu/assets/styles/blueprint/screen.css', :type => 'text/css', :media => 'screen, projection' }
+%link{ :rel => :stylesheet, :href => 'http://dev.lchc.ucsd.edu/assets/styles/blueprint/print.css',  :type => 'text/css', :media => 'print' }
+
+<!-- Font Kits: -->
+%link{ :rel => :stylesheet, :href => '/fonts/museo300/stylesheet.css',  :type => 'text/css', :media => 'screen, projection' }
+
+<!-- jQuery 1.4.2 and jQuery UI 1.8.1: -->
+%script{ :type => 'text/javascript', :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
+%script{ :type => 'text/javascript', :src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" }
+%link{ :rel => 'stylesheet', :href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/smoothness/jquery-ui.css", :type => 'text/css', :media => 'screen, projection' }
+
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/blog.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/community.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/contact.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/home.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/lchc.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/login.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/meta.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/people.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/publications.css' }
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => 'http://dev.lchc.ucsd.edu/assets/styles/lchc/search.css' }
+
+<!-- XMCA Stylesheets: -->
+%link{ :rel => 'stylesheet', :type => 'text/css', :media => 'screen, projection', :href => '/stylesheets/xmca.css' }
+
+<!-- Scripts: -->
+%script{ :type => 'text/javascript', :src => 'http://dev.lchc.ucsd.edu/assets/scripts/global.js' }
+%script{ :type => 'text/javascript', :src => 'http://dev.lchc.ucsd.edu/assets/scripts/nivo-slider/jquery.nivo.slider.pack.js' }
+%script{ :type => 'text/javascript', :src => 'http://dev.lchc.ucsd.edu/assets/scripts/home.js' }
+
+= render :partial => "shared/google"
+= csrf_meta_tag
+
+%title= title

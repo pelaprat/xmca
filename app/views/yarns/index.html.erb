@@ -1,0 +1,27 @@
+<h1>Listing yarns</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Items</th>
+    <th>Person</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @yarns.each do |yarn| %>
+  <tr>
+    <td><%= yarn.name %></td>
+    <td><%= yarn.items %></td>
+    <td><%= yarn.person %></td>
+    <td><%= link_to 'Show', yarn %></td>
+    <td><%= link_to 'Edit', edit_yarn_path(yarn) %></td>
+    <td><%= link_to 'Destroy', yarn, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Yarn', new_yarn_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  message: 
+  level: 1
+  original: MyText
+  formatted: MyText
+
+two:
+  message: 
+  level: 1
+  original: MyText
+  formatted: MyText

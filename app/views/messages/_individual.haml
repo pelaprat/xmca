@@ -1,0 +1,19 @@
+%a{ :name => "#{message.id}" }
+%table{ :class => 'message' }
+  %tr
+    %td{ :class => 'header' }
+      = render :partial => "people/name", :locals => { :person => message.person }
+      on
+      %span{:class => 'timestamp'}= message.created_at.strftime '%B %d %Y @ %H:%m'
+
+  %tr
+    %td{ :class => 'body' }
+      - message.bodies.each do |mb|
+        - if mb.level == 0
+          = print_body( mb )
+
+      - if message.assets.length > 0
+        %b Attachments:
+        %br
+        - message.assets.each do |asset|
+          = link_to asset.name, :controller => 'assets', :action => 'download', :id => asset.id

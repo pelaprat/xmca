@@ -1,0 +1,29 @@
+<h1>Listing bodies</h1>
+
+<table>
+  <tr>
+    <th>Message</th>
+    <th>Level</th>
+    <th>Original</th>
+    <th>Formatted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bodies.each do |body| %>
+  <tr>
+    <td><%= body.message %></td>
+    <td><%= body.level %></td>
+    <td><%= body.original %></td>
+    <td><%= body.formatted %></td>
+    <td><%= link_to 'Show', body %></td>
+    <td><%= link_to 'Edit', edit_body_path(body) %></td>
+    <td><%= link_to 'Destroy', body, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Body', new_body_path %>

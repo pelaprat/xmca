@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  items: 1
+  person: 
+
+two:
+  name: MyString
+  items: 1
+  person: 

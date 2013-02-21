@@ -1,0 +1,32 @@
+!!!
+!!! XML
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en", 'content-type' => "text/html;charset=ISO-8859-1"}
+  %head	
+    = render :partial => "shared/header", :locals => { :title => 'XMCA: ' + @yarn.name  }
+
+  %body
+    %div{:class => :container}
+      = render :partial => "shared/toolbar"
+
+      %div{:class => 'span-24 last', :id => :body}
+        %div{:class => 'xmca-box' }
+          = link_to 'Back to XMCA', '/'
+
+        %div{:class => 'content span-16' }
+          %div{:class => 'article'}
+            %div{:class => 'headline' }= @yarn.name
+            - @messages.each do |message|
+              = render :partial => "messages/individual", :locals => { :message => message }
+
+        %div{:class => 'toolbox span-8 last' }
+          %div{:class => 'box'}
+            %h3 Participants
+            - @participants.each do |person|
+              = render :partial => "people/name", :locals => { :person => person }
+              <br>
+          %div{:class => 'box'}
+            %h3 Files
+            - @assets.each do |asset|
+              = link_to asset.name, :controller => 'assets', :action => 'download', :id => asset.id
+              <br>
+      = render :partial => "shared/footer"

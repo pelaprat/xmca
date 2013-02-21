@@ -1,0 +1,13 @@
+.list_table
+  .title-row
+    .cell{ :style => 'width: 16px'  }
+    .cell{ :style => 'width: 225px' }= sortable "id", 'Last Post'
+    .cell{ :style => 'width: 150px' }= sortable "person_id", 'Last Author'
+    .cell{ :style => 'width: 515px' }= sortable "name", 'Subject'
+  - @yarns.each do |yarn|
+    .row
+      .cell
+      .cell-date= yarn.updated_at.strftime '%B %d %Y @ %H:%m'
+      .cell-name= link_to yarn.person.first + ' ' + yarn.person.last, person_path( yarn.person ) 
+      .cell-link= link_to "#{yarn.name} (#{yarn.items})", yarn_path( yarn, {:page => params[:page]})
+

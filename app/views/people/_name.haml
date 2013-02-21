@@ -1,0 +1,2 @@
+- person_url = url_for( :controller => :people, :action => :show, :id => person.id )
+%a{ :class => 'person_name', :href => person_url }= "#{person.first} #{person.last}"

@@ -1,0 +1,10 @@
+*~
+*.DS_Store
+Gemfile.lock
+README
+attachments/*
+config/database.yml
+log/
+public/
+script/
+tmp/

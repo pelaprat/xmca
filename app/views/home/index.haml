@@ -1,0 +1,19 @@
+!!!
+!!! XML
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en", 'content-type' => "text/html;charset=ISO-8859-1"}
+  %head	
+    = render :partial => "shared/header", :locals => { :title => 'XMCA Mailing List' }
+
+  %body
+    %div{:class => :container}
+      = render :partial => "shared/toolbar"
+
+      %div{:class => 'span-24 last', :id => :body}
+        %div{:class => 'content span-24' }
+          %div{:class => 'article'}
+            %div{:class => 'headline' } XCMA Mailing List
+            = paginate @yarns
+            = render :partial => "home/yarn_table"
+            = paginate @yarns
+
+      = render :partial => "shared/footer"

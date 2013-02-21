@@ -87,25 +87,25 @@ sub bless_message {
 ## Load the config file and ##
 ##  local paths to modules. ##
 ##
-my $db_user = 'xmca';
-my $db_pass = 'xkdKCPVt';
-my $db_name = 'xmca_production';
+my $db_user = '####';
+my $db_pass = '#########';
+my $db_name = '############';
 my $db_host = 'localhost';
 
-my $inc_mail_user        = 'xmca-receive';
-my $inc_mail_pass        = 'ams.orc6ol';
-my $inc_mail_server      = 'dssmail.ucsd.edu';
+my $inc_mail_user        = '######'
+my $inc_mail_pass        = '######'
+my $inc_mail_server      = '######'
 my $inc_mail_server_port = 993;
 
-my $out_mail_user        = 'xmca-receive';
-my $out_mail_pass        = 'ams.orc6ol';
-my $out_mail_server      = 'smtp.ucsd.edu';
+my $out_mail_user        = '######';
+my $out_mail_pass        = '######';
+my $out_mail_server      = '######';
 my $out_mail_server_port = 465; ## DH = 587
 
-my $attachment_dir       = '/Users/web/Sites/edu.ucsd.xmca/attachments';
-my $default_email        = 'pelaprat@gmail.com';
+my $attachment_dir       = '/directory/to/attachments';
+my $default_email        = '######';
 
-my $salt                 = 'jsdkSDKFJ23874DSJKF23mmDFKSDF';
+my $salt                 = 'somestring';
 
 ################################
 ## Current message variables. ##

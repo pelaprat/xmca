@@ -1,0 +1,248 @@
+.pagination {
+	font-family: Times New Roman, sans serif;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.pagination .current {
+	font-style: italic;
+}
+
+/** From other **/
+.toolbox .box {
+	font-color: green;
+	color: green;
+	font-size: 20px;
+}
+
+/*****************#*/
+/* LISTS of THINGS */
+/*******************/
+table.list_table {
+	border: 1px solid #DBDBDB;
+	display: table;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+
+}
+
+.list_table .title-row {
+	background: #EFEFEF;
+	border: 10px solid #DBDBDB;
+	display:  table-row;
+	width: auto;
+}
+
+.list_table .title-row .cell {
+	border-bottom: 2px solid #DBDBDB;
+	color: #039;
+	display:  table-cell;
+	font-size: 16px;
+	padding: 2px;
+}
+
+.list_table .title-row .cell .current {
+	padding-right: 20px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.list_table .title-row .cell .asc {
+	background-image: url(/images/up_arrow.png);
+}
+
+.list_table .title-row .cell .desc {
+	background-image: url(/images/down_arrow.png);
+}
+
+.list_table .row {
+	background: #FBFBFB;
+	display:  table-row;
+	width: auto;
+}
+
+.list_table .row:hover {
+
+}
+
+.list_table .row .cell  {
+	border-bottom: 1px solid #DBDBDB;
+	color: #336;
+	display:  table-cell;
+}
+
+.list_table .row .cell-date {
+	border-bottom: 1px solid #DBDBDB;
+	border-top: 1px solid #fff;
+	color: #A94C11;
+	display:  table-cell;
+	padding: 3px;
+	width: 250px;
+	font-size: 14px;
+}
+
+.list_table .row .cell-name {
+	border-bottom: 1px solid #DBDBDB;
+	border-top: 1px solid #fff;
+	color: #336;
+	display:  table-cell;
+	font-size: 14px;
+}
+
+.list_table .row .cell-link {
+	border-bottom: 1px solid #DBDBDB;
+	border-top: 1px solid #fff;
+	color: #red;
+	display:  table-cell;
+	font-size: 14px;
+}
+
+/*****************/
+/* MESSAGE ITEMS */
+/*****************/
+table.message {
+/*	margin-bottom: 4px;
+	padding: 2px;
+	padding-bottom: 5px;
+	padding-left: 5px; #/
+*/
+	margin-left: 0px;
+	margin-bottom: 8px;
+	width: 100%;
+}
+
+.message tr td.header {
+	border-bottom: 1px solid black; */
+	margin-left: 0px;
+	padding-left: 0px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	width: 500px;
+}
+
+.message tr td.header_tools {
+/*	border-bottom: 1px solid black; */
+	color: #555555;
+	font-weight: bold;
+	padding-bottom: 2px;
+	width: 500px;
+}
+
+.message tr td.body {
+	background: #F3F3F3;
+	border-left: 1px dashed #aaaaaa;
+	border-right: 1px dashed #aaaaaa;
+	border-bottom: 1px dashed #aaaaaa;
+	font-weight: normal;
+	text-align: left;
+	padding: 10px;
+	vertical-align: top;
+	width: 500px;
+}
+
+.message tr td.tools {
+	border-top: 1px dashed #aaaaaa;
+	font-weight: normal;
+	text-align: left;
+	padding: 10px;
+	vertical-align: top;
+	width: 100%;
+}
+
+.message tr td.body .t {
+	margin-bottom: 15px;
+	width: 500px;
+}
+
+.message tr td.body .q {
+	border: 1px solid #AAAAAA;
+	display: none;
+	margin-left: 2px;
+	padding: 3px;
+	width: 500px;
+}
+
+/***********************/
+/* TOTAL SHARED ITEMS. */
+/***********************/
+.keyword {
+	font-weight: bold;
+	background: yellow;
+}
+
+div.xmca-box {
+	position:relative;
+	float:right;
+	margin-right: 15px;
+	width: 200px;
+	height: 30px;
+	margin-top: 25px;
+	background: #B28388;
+	background-color: #B28388;
+	padding-top: 5px;
+	border: 2px solid #752328;
+
+/*	
+	float: right*/
+}
+
+div.xmca-box a:link, div.xmca-box a:hover, div.xmca-box a:visited, div.xmca-box a:active {
+	background: #E2A3A8;
+	background-color: #E2A3A8;
+	color: black;
+	text-decoration: none;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 22px;
+	font-style: italic;
+	padding-top: 2px;
+	top:0px;
+	left:0px;
+	width: 200px;
+	height: 33px;
+	position:absolute;
+	display:block;
+}
+
+.headline {
+	font-family: Times New Roman, sans serif;
+	font-size: 26px;
+	font-style: italic;
+	padding-bottom: 5px;
+}
+
+span.timestamp {
+}
+
+a.person_name {
+	margin-left: 0px;
+}
+
+#button {
+  border:        1px solid #9999FF;
+  color:         #662222;
+  font-weight:   bold;
+  text-align:    center;
+  cursor:        pointer;
+}
+
+#category {
+	padding: 3px;
+
+}
+
+div.return_to_ensemble {
+	background: #EFEFEF;
+	border: 1px solid #999999;
+	font-weight: bold;
+	margin: 4px;
+	padding: 4px;
+	text-align: center;
+	width: 185px;
+}
+
+div.return_to_ensemble a {
+	font-decoration: none;
+}
